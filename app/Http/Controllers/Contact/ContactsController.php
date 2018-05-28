@@ -8,9 +8,11 @@ use contactin\Http\Controllers\Controller;
 
 class ContactsController extends Controller
 {
-    public function index(Contact $contact)
+    public function index()
     {
-        return view('contact.index')->with(['contacts' => $contact]);
+        $contacts = Contact::all();
+
+        return view('contact.index')->with(['contacts' => $contacts]);
     }
 
 
