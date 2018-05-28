@@ -21,6 +21,7 @@
         <a href="#" class="btn btn-login">LOGIN!</a>
         <a href="#" class="btn">SIGNUP!</a>
     @endauth
+    @include('layouts.components.flash')
 </div>
 <div class="container">
     @section('content') @show

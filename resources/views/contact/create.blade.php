@@ -13,36 +13,42 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" class="form-control is-invalid" name="name">
-                            <span class="invalid-feedback">
-                                Enter you name
-                            </span>
+                            <input type="text" class="form-control {{ $errors->has('name')? 'is-invalid': ''  }}"
+                                   name="name" value="{{old('name')}}">
+                            @if($errors->has('name'))
+                                <span class="invalid-feedback"> </span>
+                            @endif
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="text" class="form-control is-invalid" name="email">
-                            <span class="invalid-feedback">
-                                Enter you name
-                            </span>
+                            <input type="text"
+                                   class="form-control {{ $errors->has('email')? 'is-invalid' : '' }}"
+                                   name="email" value="{{old('email')}}">
+                            @if($errors->has('email'))
+                                <span class="invalid-feedback"> </span>
+                            @endif
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone</label>
-                            <input type="text" class="form-control is-invalid" name="phone">
-                            <span class="invalid-feedback">
-                                Enter you name
-                            </span>
+                            <input type="text" class="form-control {{$errors->has('phone')? 'is-invalid'  : ''}}"
+                                   name="phone" value="{{old('phone')}}">
+                            @if($errors->has('phone'))
+                                <span class="invalid-feedback"> </span>
+                            @endif
                         </div>
                         <div class="form-group row">
                             <div class="col-md-6">
                                 <label for="image">Contact Image</label>
-                                <input type="file" id="image-uploader" class="form-control is-invalid" name="image">
-                                <span class="invalid-feedback">
-                                Enter you name
-                            </span>
+                                <input type="file" id="image-uploader"
+                                       class="form-control {{$errors->has('image')? 'is-invalid' : ''}}" name="image"
+                                       value="{{old('image')}}">
+                                @if($errors->has('image'))
+                                    <span class="invalid-feedback"> </span>
+                                @endif
                             </div>
                             <div class="col-md-6">
                                 <div class="contact-image">
-                                    <img src="{{asset('images/headshot-1.jpg')}}" alt="alt text" id="contact-image">
+                                    <img src="{{asset('images/avatar.jpg')}}" alt="alt text" id="contact-image">
                                 </div>
                             </div>
                         </div>
