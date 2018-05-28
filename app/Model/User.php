@@ -1,7 +1,8 @@
 <?php
 
-namespace contactin;
+namespace contactin\Model;
 
+use contactin\Model\Contact\Contact;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -26,4 +27,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function contacts()
+    {
+        return $this->hasMany(Contact::class);
+    }
 }

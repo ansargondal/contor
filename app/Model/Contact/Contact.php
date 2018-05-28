@@ -2,6 +2,7 @@
 
 namespace contactin\Model\Contact;
 
+use contactin\Model\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Contact extends Model
@@ -14,5 +15,10 @@ class Contact extends Model
     protected $hidden = [
         'user_id'
     ];
+
+    public function user()
+    {
+        $this->belongsTo(User::class);
+    }
 
 }
