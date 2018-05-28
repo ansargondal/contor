@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(Model\Contact::class, function (Faker $faker) {
+$factory->define(\contactin\Model\Contact\Contact::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->email,

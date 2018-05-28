@@ -1,6 +1,6 @@
 <?php
 
-namespace contactin;
+namespace contactin\Model;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
