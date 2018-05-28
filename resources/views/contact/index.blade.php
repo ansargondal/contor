@@ -21,8 +21,8 @@
                 <td class="text-center">{{$contact->name}}</td>
                 <td class="text-center">{{$contact->email}}</td>
                 <td class="text-center">{{$contact->phone}}</td>
-                <td class="text-center">{{date_format(new $contact->created_at, 'M, d, Y @ h:i'}}</td>
-                <td class="text-center">{{date_format(new $contact->updated_at, 'M, d, Y @ h:i'}}</td>
+                <td class="text-center">{{date_format(new $contact->created_at, 'M, d, Y @ h:i')}}</td>
+                <td class="text-center">{{date_format(new $contact->updated_at, 'M, d, Y @ h:i')}}</td>
                 <td class="text-center">
                     <a href="{{route('contacts.edit', ['id' => $contact->id])}}">
                         <i class="fa fa-edit p-1" aria-hidden="true"></i>

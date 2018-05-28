@@ -2,14 +2,15 @@
 
 namespace contactin\Http\Controllers\Contact;
 
+use contactin\Model\Contact\Contact;
 use Illuminate\Http\Request;
 use contactin\Http\Controllers\Controller;
 
 class ContactsController extends Controller
 {
-    public function index()
+    public function index(Contact $contact)
     {
-        return view('contact.index');
+        return view('contact.index')->with(['contacts' => $contact]);
     }
 
 
